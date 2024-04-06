@@ -27,6 +27,7 @@
     ];
     home.stateVersion = "23.11";
   };
+  services.gnome.gnome-keyring.enable = true;
   
   nix.settings.trusted-users = ["tangtang"];
   
