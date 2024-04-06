@@ -42,6 +42,7 @@
     pkgs.shellcheck
 
     # others
+    pkgs.gnome.gnome-keyring
     pkgs.fzf
     pkgs.lazygit
     pkgs.neofetch
