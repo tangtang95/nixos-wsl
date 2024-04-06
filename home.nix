@@ -83,7 +83,7 @@
 	init = {
 	  defaultBranch = "main";
 	};
-	credential.helper = "store git-credential-store";
+	credential.helper = "store";
       };
     };
     neovim = {
