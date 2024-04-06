@@ -64,6 +64,19 @@
       enable = true;
       userName = "Tang-Tang Zhou";
       userEmail = "tangtang2995@gmail.com";
+      aliases = {
+        pfl = "push --force-with-lease";
+	log1l = "log --oneline";
+      };
+      extraConfig = {
+        push = {
+	  default = "current";
+	  autoSetupRemote = true;
+	};
+	init = {
+	  defaultBranch = main
+	};
+      };
     };
     neovim = {
       enable = true;
