@@ -74,7 +74,7 @@
 	  autoSetupRemote = true;
 	};
 	init = {
-	  defaultBranch = main
+	  defaultBranch = "main";
 	};
       };
     };
