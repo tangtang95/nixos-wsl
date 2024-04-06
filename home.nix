@@ -3,7 +3,6 @@
 {
   home.packages = [
     # new coreutils
-    pkgs.eza
     pkgs.ripgrep
     pkgs.fd
     pkgs.bat
@@ -50,7 +49,17 @@
   ];
 
   programs = {
-    fish.enable = true;
+    fish = {
+      enable = true;
+    };
+    eza = {
+      enable = true;
+      enableAliases = true;
+      icons = true;
+    };
+    starship = {
+      enable = true;
+    };
     git = {
       enable = true;
       userName = "Tang-Tang Zhou";

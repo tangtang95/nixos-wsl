@@ -14,9 +14,10 @@
   wsl.enable = true;
   wsl.defaultUser = "tangtang";
 
+  programs.fish.enable = true;
   users.users.tangtang = {
     isNormalUser = true;
-    shell = pkgs.bash;
+    shell = pkgs.fish;
     extraGroups = [ "wheel" ];
   };
 
