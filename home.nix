@@ -62,6 +62,9 @@
       enableAliases = true;
       icons = true;
     };
+    zoxide = {
+      enable = true;
+    };
     starship = {
       enable = true;
     };
