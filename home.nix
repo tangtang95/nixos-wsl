@@ -65,7 +65,6 @@
     };
     git = {
       enable = true;
-      package = pkgs.gitFull;
       userName = "Tang-Tang Zhou";
       userEmail = "tangtang2995@gmail.com";
       aliases = {
