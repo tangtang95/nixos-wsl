@@ -30,9 +30,6 @@
     ];
     home.stateVersion = "23.11";
   };
-  environment.systemPackages = [
-    (import ./win32yank.nix {inherit pkgs;})
-  ];
 
   nix.settings.trusted-users = ["tangtang"];
   

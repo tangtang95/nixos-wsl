@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   home.packages = [
@@ -47,6 +47,7 @@
     pkgs.lazygit
     pkgs.neofetch
     pkgs.tealdeer
+    pkgs.wl-clipboard
   ];
 
   programs = {
