@@ -12,14 +12,22 @@
   ];
 
   wsl.enable = true;
-  wsl.defaultUser = "nixos";
+  wsl.defaultUser = "tangtang";
 
-  home-manager.users.nixos = {
+  users.users.tangtang = {
+    isNormalUser = true;
+    shell = pkgs.bash;
+    extraGroups = [ "wheel" ];
+  };
+
+  home-manager.users.tangtang = {
     imports = [
       ./home.nix
     ];
     home.stateVersion = "23.11";
   };
+  
+  nix.settings.trusted-users = ["tangtang"];
   
 
   # This value determines the NixOS release from which the default
