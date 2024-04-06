@@ -30,6 +30,7 @@
     pkgs.rustup
     pkgs.python3
     pkgs.lua
+    pkgs.gcc
     
     # language tools
     pkgs.tree-sitter
@@ -69,20 +70,20 @@
       userEmail = "tangtang2995@gmail.com";
       aliases = {
         pfl = "push --force-with-lease";
-	log1l = "log --oneline";
+        log1l = "log --oneline";
       };
       extraConfig = {
         push = {
-	  default = "current";
-	  autoSetupRemote = true;
-	};
-	pull = {
-	  rebase = true;
-	};
-	init = {
-	  defaultBranch = "main";
-	};
-	credential.helper = "store";
+          default = "current";
+          autoSetupRemote = true;
+        };
+        pull = {
+          rebase = true;
+        };
+        init = {
+          defaultBranch = "main";
+        };
+        credential.helper = "store";
       };
     };
     neovim = {

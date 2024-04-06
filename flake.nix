@@ -18,7 +18,7 @@
       modules = [
         { nix.registry.nixpkgs.flake = nixpkgs; }
         ./configuration.nix
-	NixOS-WSL.nixosModules.wsl
+        NixOS-WSL.nixosModules.wsl
         home-manager.nixosModules.home-manager
       ];
     };
