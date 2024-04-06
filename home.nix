@@ -42,7 +42,6 @@
     pkgs.shellcheck
 
     # others
-    pkgs.gnome.gnome-keyring
     pkgs.fzf
     pkgs.lazygit
     pkgs.neofetch
@@ -66,6 +65,7 @@
     };
     git = {
       enable = true;
+      package = pkgs.gitFull;
       userName = "Tang-Tang Zhou";
       userEmail = "tangtang2995@gmail.com";
       aliases = {
@@ -83,9 +83,7 @@
 	init = {
 	  defaultBranch = "main";
 	};
-	credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
+	credential.helper = "store git-credential-store";
       };
     };
     neovim = {
