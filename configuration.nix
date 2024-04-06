@@ -11,8 +11,11 @@
   imports = [
   ];
 
-  wsl.enable = true;
-  wsl.defaultUser = "tangtang";
+  wsl = {
+    enable = true;
+    defaultUser = "tangtang";
+    wslConf.interop.appendWindowsPath = false;
+  };
 
   programs.fish.enable = true;
   users.users.tangtang = {
@@ -27,7 +30,10 @@
     ];
     home.stateVersion = "23.11";
   };
-  
+  environment.systemPackages = [
+    (import ./win32yank.nix {inherit pkgs;})
+  ];
+
   nix.settings.trusted-users = ["tangtang"];
   
 
