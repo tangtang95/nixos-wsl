@@ -31,12 +31,14 @@
     pkgs.python3
     pkgs.lua
     pkgs.gcc
+    pkgs.nodejs
     
     # language tools
     pkgs.tree-sitter
 
     # language servers
     pkgs.nil
+    pkgs.marksman
 
     # formatters and linters
     pkgs.nix
