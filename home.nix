@@ -53,37 +53,7 @@
   ];
 
   # zellij static config file (because limitation in nix to kdl converter)
-  home.file.".config/zellij/config.kdl" = {
-    text = ''
-      keybinds {
-        unbind "Ctrl g"
-        locked {
-          bind "Ctrl a" { SwitchToMode "Normal"; }
-        }
-        shared {
-          // these keybindings will be present in all modes
-          bind "Ctrl a" { SwitchToMode "locked"; }
-        }
-      }
-      pane_frames false
-      theme "catppuccin-mocha"
-      themes {
-        catppuccin-mocha {
-          bg "#585b70"
-          black "#181825"
-          blue "#89b4fa"
-          cyan "#89dceb"
-          fg "#cdd6f4"
-          green "#a6e3a1"
-          magenta "#f5c2e7"
-          orange "#fab387"
-          red "#f38ba8"
-          white "#cdd6f4"
-          yellow "#f9e2af"
-        }
-      }
-    '';
-  };
+  xdg.configFile."zellij/config.kdl".source = ./config/zellij.kdl;
 
   programs = {
     fish = {
