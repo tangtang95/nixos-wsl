@@ -28,9 +28,10 @@
 
     # languages
     pkgs.rustup
-    pkgs.python3
-    pkgs.lua
+    (pkgs.python3.withPackages(ps: with ps; [pip]))
+    (pkgs.lua.withPackages(ps: with ps; [jsregexp]))
     pkgs.gcc
+    pkgs.gnumake
     pkgs.nodejs
     
     # language tools
@@ -39,10 +40,12 @@
     # language servers
     pkgs.nil
     pkgs.marksman
+    pkgs.lua-language-server
 
     # formatters and linters
     pkgs.nix
     pkgs.shellcheck
+    pkgs.markdownlint-cli
     
     # wsl only
     pkgs.wslu # for xdg-open https://github.com/microsoft/WSL/issues/8892#issuecomment-1772972570
