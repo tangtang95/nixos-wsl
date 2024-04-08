@@ -14,6 +14,7 @@
     # web tools
     pkgs.wget
     pkgs.httpie
+    pkgs.termscp
 
     # file processors
     pkgs.jq
