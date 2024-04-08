@@ -43,6 +43,9 @@
     # formatters and linters
     pkgs.nix
     pkgs.shellcheck
+    
+    # wsl only
+    pkgs.wslu # for xdg-open https://github.com/microsoft/WSL/issues/8892#issuecomment-1772972570
 
     # others
     pkgs.fzf
@@ -50,7 +53,11 @@
     pkgs.neofetch
     pkgs.tealdeer
     pkgs.wl-clipboard
+    pkgs.xdg-utils
   ];
+  home.sessionVariables = {
+    BROWSER = "wslview";
+  };
 
   # zellij static config file (because limitation in nix to kdl converter)
   xdg.configFile."zellij/config.kdl".source = ./config/zellij.kdl;
