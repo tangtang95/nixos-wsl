@@ -33,20 +33,33 @@
     pkgs.gcc
     pkgs.gnumake
     pkgs.nodejs
-    
+
     # language tools
     pkgs.tree-sitter
 
     # language servers
-    pkgs.nil
-    pkgs.marksman
+    pkgs.nil # nix
+    pkgs.marksman # markdown
     pkgs.lua-language-server
+    pkgs.nodePackages.vscode-langservers-extracted # html, css, json, eslint
+    pkgs.nodePackages.typescript-language-server
+    pkgs.nodePackages.yaml-language-server
+    pkgs.taplo # toml
 
-    # formatters and linters
-    pkgs.nix
+    # formatters
+    pkgs.alejandra # nix
+    pkgs.nodePackages.prettier
+    pkgs.stylua
+    pkgs.shfmt # shell
+
+    # linters
+    pkgs.deadnix # nix
     pkgs.shellcheck
     pkgs.markdownlint-cli
-    
+
+    # dap (debugger tool)
+    pkgs.vscode-extensions.vadimcn.vscode-lldb
+
     # wsl only
     pkgs.wslu # for xdg-open https://github.com/microsoft/WSL/issues/8892#issuecomment-1772972570
 
