@@ -78,6 +78,7 @@
 
   # zellij static config file (because limitation in nix to kdl converter)
   xdg.configFile."zellij/config.kdl".source = ./config/zellij.kdl;
+  home.file.".local/state/nix/profile/bin/cmd.exe".source = config.lib.file.mkOutOfStoreSymlink /mnt/c/Windows/System32/cmd.exe;
 
   programs = {
     fish = {

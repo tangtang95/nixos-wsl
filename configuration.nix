@@ -18,6 +18,7 @@
   };
 
   programs.fish.enable = true;
+  programs.nix-ld.enable = true;
   users.users.tangtang = {
     isNormalUser = true;
     shell = pkgs.fish;
